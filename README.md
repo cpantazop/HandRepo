@@ -1,6 +1,10 @@
 # HandRepo
 Fall 2023 - A study on 2D/3D hand representation for vision applications
 
+**Start here**: [read this blog](https://towardsdatascience.com/gentle-introduction-to-2d-hand-pose-estimation-approach-explained-4348d6d79b11)
+
+**Then read this**: [complex hand keypoints detection](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://arxiv.org/pdf/1704.07809.pdf)
+
 ## 2D hand pose estimation
 
 *Papers list here*
