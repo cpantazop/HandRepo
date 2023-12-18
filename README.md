@@ -8,7 +8,7 @@ Fall 2023 - A study on 2D/3D hand representation for vision applications
 ## 2D hand pose estimation
 
 *Papers list here*
-
+**Then read this**: [complex hand keypoints detection](https://arxiv.org/pdf/1704.07809)
 *Datasets here*
 
 ## 3D hand pose estimation
