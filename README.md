@@ -60,7 +60,7 @@ Fall 2023 - A study on 2D/3D hand representation for vision applications
   13. EgoDexter
   14. SynthHands
       
-## 2D and 3d hand pose estimation an 3d hand reconstruction
+## 2D and 3d hand pose estimation and 3d hand reconstruction
 
 - **Hand Keypoint Detection in Single Images using Multiview Bootstrapping**: [read pdf](https://arxiv.org/pdf/1704.07809.pdf)  
   Tomas Simon, Hanbyul Joo, Iain Matthews, Yaser Sheikh
