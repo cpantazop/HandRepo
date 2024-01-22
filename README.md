@@ -123,6 +123,8 @@ Comment: Last update was at January 2024. You may also check [Awesome Hand Pose 
   The MediaPipe Hand Landmarker task lets you detect the landmarks of the hands in an image.
 - [MMPose](https://mmpose.readthedocs.io/en/latest/demos.html#hand-keypoint-estimation)  
   MMPose is a Pytorch-based pose estimation open-source toolkit, a member of the OpenMMLab Project
+- [SMPL-X](https://smpl-x.is.tue.mpg.de/)  
+  Expressive Body Capture: 3D Hands, Face, and Body from a Single Image
 - [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)  
   OpenPose has represented the first real-time multi-person system to jointly detect human body, hand, facial, and foot keypoints (in total 135 keypoints) on single images.  
 - [Hand Gesture Recognition with YOLOv8 on OAK-D in Near Real-Time](https://pyimagesearch.com/2023/05/15/hand-gesture-recognition-with-yolov8-on-oak-d-in-near-real-time/)  
@@ -130,6 +132,6 @@ Comment: Last update was at January 2024. You may also check [Awesome Hand Pose 
 - [Real-Time 2D and 3D Hand Pose Estimation from RGB Image](https://github.com/enghock1/Real-Time-2D-and-3D-Hand-Pose-Estimation/)  
   Project improving the CVPR 2019 paper ["3D Hand Shape and Pose Estimation from a Single RGB Image"](https://github.com/3d-hand-shape/hand-graph-cnn)  
 - [Real-time Hand-Detection using Neural Networks (SSD) on Tensorflow.](https://github.com/victordibia/handtracking)  
-  Documentation of steps and scripts used to train a hand detector using Tensorflow (Object Detection API).  
+  Documentation of steps and scripts used to train a hand detector using Tensorflow (Object Detection API).
 - [MobileHand: Real-time 3D Hand Shape and Pose Estimation from Color Image](https://gmntu.github.io/mobilehand/)  
   An approach for real-time estimation of 3D hand shape and pose from a single RGB image.
