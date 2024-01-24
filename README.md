@@ -41,9 +41,6 @@ Fall 2023 - A study on 2D/3D hand representation for vision applications
 
 - **Survey on depth and RGB image-based 3D hand shape and pose estimation**: [read pdf](https://www.sciencedirect.com/science/article/pii/S2096579621000280)  
   Lin HUANG , Boshen ZHANG, Zhilin GUO , Yang XIAO , Zhiguo CAO , Junsong YUAN
-    
-- **Back to RGB: 3D tracking of hands and hand-object interactions based on short-baseline stereo**: [read pdf](https://arxiv.org/pdf/1705.05301.pdf)  
-  Paschalis Panteleris, Antonis Argyros
 
 - **3D Hand Shape and Pose Estimation from a Single RGB Image**: [read pdf](https://arxiv.org/pdf/1903.00812.pdf)  
   Liuhao Ge , Zhou Ren , Yuncheng Li , Zehao Xue, Yingying Wang , Jianfei Cai , Junsong Yuan
@@ -59,9 +56,6 @@ Fall 2023 - A study on 2D/3D hand representation for vision applications
 
 - **3D Hand Shape and Pose Estimation based on 2D Hand Keypoints**: [read pdf](https://dl.acm.org/doi/pdf/10.1145/3594806.3594838)  
   Drosakis Drosakis, Antonis Argyros
-
-- **3D Hand Pose and Shape Estimation from RGB Images for Keypoint-Based Hand Gesture Recognition**: [read pdf](https://arxiv.org/pdf/2109.13879.pdf)  
-  Danilo Avola , Luigi Cinque , Alessio Fagioli , Gian Luca Foresti , Adriano Fragomeni , Daniele Pannone
 
 - **MobileHand: Real-time 3D Hand Shape and Pose Estimation from Color Image**: [read pdf](https://www.researchgate.net/publication/347025951_MobileHand_Real-Time_3D_Hand_Shape_and_Pose_Estimation_from_Color_Image)  
   Guan Ming Lim, Prayook Jatesiktat, Wei Tech Ang
@@ -123,8 +117,6 @@ Comment: Last update was at January 2024. You may also check [Awesome Hand Pose 
   The MediaPipe Hand Landmarker task lets you detect the landmarks of the hands in an image.
 - [MMPose](https://mmpose.readthedocs.io/en/latest/demos.html#hand-keypoint-estimation)  
   MMPose is a Pytorch-based pose estimation open-source toolkit, a member of the OpenMMLab Project
-- [SMPL-X](https://smpl-x.is.tue.mpg.de/)  
-  Expressive Body Capture: 3D Hands, Face, and Body from a Single Image
 - [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)  
   OpenPose has represented the first real-time multi-person system to jointly detect human body, hand, facial, and foot keypoints (in total 135 keypoints) on single images.  
 - [Hand Gesture Recognition with YOLOv8 on OAK-D in Near Real-Time](https://pyimagesearch.com/2023/05/15/hand-gesture-recognition-with-yolov8-on-oak-d-in-near-real-time/)  
