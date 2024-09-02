@@ -13,7 +13,7 @@ img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 # gets the landmark results from mediapipe and given image
 results = track_utils.track_landmarks_from_img(img)
 # print(results.hand_landmarks[0][0].x) #prints the x value of the first keypoint
-# print(results) #prints the x value of the first keypoint
+# print(results) #prints the results
 # Extract the x, y, and z values into a list of lists
 landmarks = [[lm.x, lm.y, lm.z] for lm in results.hand_landmarks[0][:]]
 print(landmarks)

@@ -43,3 +43,4 @@ def draw_landmarks_on_image(rgb_image, detection_result):
                 FONT_SIZE, HANDEDNESS_TEXT_COLOR, FONT_THICKNESS, cv2.LINE_AA)
 
   return annotated_image
+
