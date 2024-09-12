@@ -32,7 +32,7 @@ def solve(target_keypoints,image):
     optimizer = torch.optim.LBFGS(param, lr=1e-2) #choose the optimizer
     #scheduler is optional to reduce the Learning Rate by 'gamma' every 'step_size' 
     # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=500, gamma=0.5) 
-    proc_bar = tqdm.tqdm(range(1000))#the progress bar on the terminal and the steps of the optimization
+    proc_bar = tqdm.tqdm(range(100))#the progress bar on the terminal and the steps of the optimization
     rr.init("Keypoints2ManoHand", spawn=True)  # Initialize Rerun viewer
     rr.log("real", rr.Points3D(target_keypoints, colors=(0, 0, 255),labels=[str(i) for i in range(21)], radii=0.1))#show MP real keypoints
     rr.log("image", rr.Image(image))
@@ -52,8 +52,8 @@ def solve(target_keypoints,image):
         J = mano_output.joints[0]
 
         # Compute the loss
-        # MSEloss = torch.nn.functional.mse_loss(J, target_keypoints)
-        GMLoss = GMLossCalc(J - target_keypoints,1)
+        MSEloss = torch.nn.functional.mse_loss(J, target_keypoints)
+        GMLoss = GMLossCalc(J - target_keypoints,150)
         # shape_reg = torch.norm(betas_shape) * 1e-2  # Regularization term
 
         total_loss = GMLoss
