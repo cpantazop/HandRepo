@@ -10,7 +10,7 @@ import numpy as np
 
 def track_landmarks_from_img(numpy_image):    
     # choose options and create detector   
-    base_options = python.BaseOptions(model_asset_path='models/hand_landmarker.task')
+    base_options = python.BaseOptions(model_asset_path='assets/mediapipe/hand_landmarker.task')
     VisionRunningMode = vision.RunningMode
     options = vision.HandLandmarkerOptions(base_options=base_options,running_mode=VisionRunningMode.IMAGE, num_hands=1)
     detector = vision.HandLandmarker.create_from_options(options)
@@ -34,10 +34,14 @@ def get_real_landmarks(rgb_image, detection_result):
     hand_landmarks = hand_landmarks_list[idx]
     handedness = handedness_list[idx]
 
+    # print(handedness[idx].display_name)
+
+    IsLeft = handedness[idx].display_name == "Left"
+
     # Get the top left corner of the detected hand's bounding box.
     height, width, _ = annotated_image.shape
     x_coordinates = [int(landmark.x * width) for landmark in hand_landmarks]
     y_coordinates = [int(landmark.y * height) for landmark in hand_landmarks]
     z_coordinates = [int(landmark.z * width) for landmark in hand_landmarks]
    
-  return x_coordinates,y_coordinates,z_coordinates,height,width
+  return x_coordinates,y_coordinates,z_coordinates,height,width,IsLeft
