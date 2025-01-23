@@ -10,7 +10,7 @@ import numpy as np
 
 def track_landmarks_from_img(numpy_image):    
     # choose options and create detector   
-    base_options = python.BaseOptions(model_asset_path='assets/mediapipe/hand_landmarker.task')
+    base_options = python.BaseOptions(model_asset_path='manotorch/assets/mediapipe/hand_landmarker.task')
     VisionRunningMode = vision.RunningMode
     options = vision.HandLandmarkerOptions(base_options=base_options,running_mode=VisionRunningMode.IMAGE, num_hands=1)
     detector = vision.HandLandmarker.create_from_options(options)
