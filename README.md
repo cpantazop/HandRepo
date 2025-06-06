@@ -1,5 +1,22 @@
 # HandRepo
-Fall 2023 - A study on 2D/3D hand representation for vision applications
+This repository hosts the code and notes developed during a special topic project titled **A study on 2D/3D hand representation for computer vision applications**. This initial study led to the formulation of my thesis titled **Articulated 3D Hand from a Single RGB Image**, which was later formalized into a publication: **Monocular 3D Hand Pose Estimation with Implicit Camera Alignment**. The work focuses on estimating the 3D articulation of the human hand from a single RGB image, without requiring knowledge of camera parameters.
+
+For full details, please see the [paper](xxxx).
+
+## Installation
+
+To install the necessary dependencies, please follow the installation instructions from the [manotorch repository](https://github.com/lixiny/manotorch), as this implementation builds upon it. 
+
+Additionally, for performing quantitative evaluations, we followed the evaluation setup from [Minimal-Hand-pytorch](https://github.com/MengHao666/Minimal-Hand-pytorch), ensuring consistency and direct comparability with prior works. Therefore, to successfully run our evaluation code, it is also necessary to follow the installation instructions provided by the Minimal-Hand-pytorch repository.
+
+The required models for MediaPipe and MANO are included in the `models/` directory for convenience.  
+However, if preferred, they can also be downloaded separately from the official sources:  
+- [MediaPipe Hand Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker)  
+- [MANO Hand Model](https://mano.is.tue.mpg.de)
+
+
+# A study on 2D/3D hand representation for computer vision applications
+The following notes originate from the initial study phase and are preserved here for reference.
 
 ## Contents
 
