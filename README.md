@@ -9,10 +9,13 @@ To install the necessary dependencies, please follow the installation instructio
 
 Additionally, for performing quantitative evaluations, we followed the evaluation setup from [Minimal-Hand-pytorch](https://github.com/MengHao666/Minimal-Hand-pytorch), ensuring consistency and direct comparability with prior works. Therefore, to successfully run our evaluation code, it is also necessary to follow the installation instructions provided by the Minimal-Hand-pytorch repository.
 
-The required models for MediaPipe and MANO are included in the `models/` directory for convenience.  
-However, if preferred, they can also be downloaded separately from the official sources:  
+The required models for MediaPipe and MANO have to be downloaded separately from the official sources:  
 - [MediaPipe Hand Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker)  
 - [MANO Hand Model](https://mano.is.tue.mpg.de)
+Then the following files have to be included in the `models/` directory:
+- MANO_LEFT.pkl
+- MANO_RIGHT.pkl
+- hand_landmarker.task
 
 
 # A study on 2D/3D hand representation for computer vision applications
