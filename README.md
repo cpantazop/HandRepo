@@ -12,6 +12,7 @@ Additionally, for performing quantitative evaluations, we followed the evaluatio
 The required models for MediaPipe and MANO have to be downloaded separately from the official sources:  
 - [MediaPipe Hand Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker)  
 - [MANO Hand Model](https://mano.is.tue.mpg.de)
+
 Then the following files have to be included in the `models/` directory:
 - MANO_LEFT.pkl
 - MANO_RIGHT.pkl
