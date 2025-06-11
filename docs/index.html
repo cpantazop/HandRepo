@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Monocular 3D Hand Pose Estimation with Implicit Camera Alignment">
+  <meta name="keywords" content="AI, Hand Pose Estimation, monocular, 3D hand articulation, optimization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monocular 3D Hand Pose Estimation with Implicit Camera Alignment</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXXXXX');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="stylesheet" href="./static/css/dics.css">
+  <script src="./static/js/dics.js"></script>
+  <link rel="stylesheet" href="./static/css/BeerSlider.css"/>
+  <script src="./static/js/BeerSlider.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://www.github.com/cpantazop">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/cpantazop/HandRepo">
+            A study on 2D/3D hand representation for computer vision applications 
+          </a>
+          <!-- <a class="navbar-item" href="">
+            Placeholder #2
+          </a>
+          <a class="navbar-item" href="">
+            Placeholder #3
+          </a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <img width=8% src="./static/images/mov_icon.png" class="center">
+          <br><br> -->
+          <h1 class="title is-1 publication-title">Monocular 3D Hand Pose Estimation with Implicit Camera Alignment</h1>
+          <div class="is-size-3 publication-authors">
+            <span class="author-block">
+                <a href="https://github.com/cpantazop">Christos Pantazopoulos</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://spthermo.github.io/">Spyridon Thermos</a><sup>2</sup></span>
+            <span class="author-block">
+                <a href="https://www.e-ce.uth.gr/department/faculty/gpotamianos/">Gerasimos Potamianos</a><sup>1</sup>,</span>
+  
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup><a href="https://www.e-ce.uth.gr/">Department of Electrical and Computer Engineering, University of Thessaly, Greece</a></span>
+            <span class="author-block"><sup>2</sup><a href="https://www.moverse.ai">Moverse</a>,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+              </span>   -->
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>                                                                   
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/cpantazop/HandRepo"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+            <!-- <br> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <div class="container has-text-centered is-max-desktop">
+          <img width=50% src="./static/images/resultmonalisa.PNG" class="center">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Teaser. -->
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Estimating the 3D hand articulation from a single color image is a continuously investigated problem with applications in Augmented Reality (AR), Virtual Reality (VR), Human-Computer Interaction (HCI), and robotics.
+            Apart from the absence of depth information, occlusions, articulation complexity, and the need for camera parameters knowledge pose additional challenges.
+            In this work, we propose an optimization pipeline for estimating the 3D hand articulation from 2D keypoint input, which includes a keypoint alignment step and a fingertip loss to overcome the need to know or estimate the camera parameters.
+            We evaluate our approach on the EgoDexter and Dexter+Object benchmarks to showcase that our approach performs competitively with the SotA, while also demonstrating its robustness when processing "in-the-wild" images without any prior camera knowledge. 
+            Our quantitative analysis highlights the sensitivity of the 2D keypoint estimation accuracy, despite the use of hand priors.          </p>
+        </div>
+      </div>
+    </div>
+</section>
+<!--/ Abstract-->
+
+<!-- Paper video. -->
+<!-- <section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!--/ Paper video. -->
+
+<!-- Pipeline -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <h3 class="title is-3">Our proposed pipeline</h3>
+        <div class="content has-text-justified">
+          <p>
+            To tackle the problem of fitting an articulated 3D hand from a single RGB image, we design the pipeline shown below.
+            The input is a standard RGB image containing a human hand, and the output is a 3D hand in the exact same pose and orientation.
+          </p>
+        </div>
+        <div class="container has-text-centered is-max-desktop">    
+            <img width=80% src="./static/images/pipeline.png" class="center">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Pipeline -->
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{albanis2023noise,
+  author    = {Pantazopoulos, Christos, and Thermos, Spyridon and Potamianos, Gerasimos.},
+  title     = {Monocular 3D Hand Pose Estimation with Implicit Camera Alignment},
+  booktitle = {arxiv},
+  url       = {},
+  month     = {},
+  year      = {2025}  
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/pdf/paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a class="icon-link" href="https://github.com/cpantazop" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+        <div class="content">
+          <p>
+            The website template is borrowed from <a href="https://nerfies.github.io" target="_blank">nerfies</a>.
+          </p>
+        </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  $.fn.BeerSlider = function ( options ) {
+    options = options || {};
+    return this.each(function() {
+      new BeerSlider(this, options);
+      
+    });
+  };
+  $('.beer-slider').each( (function( index, el ) {
+    $(el).BeerSlider({start: $(el).data('beer-start')})
+  }));
+</script>
+
+</body>
+</html>
