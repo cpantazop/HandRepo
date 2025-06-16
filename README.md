@@ -1,7 +1,7 @@
 # HandRepo
 This repository hosts the code and notes developed during a special topic project titled **A study on 2D/3D hand representation for computer vision applications**. This initial study led to the formulation of my thesis titled **Articulated 3D Hand from a Single RGB Image**, which was later formalized into a publication: **Monocular 3D Hand Pose Estimation with Implicit Camera Alignment**. The work focuses on estimating the 3D articulation of the human hand from a single RGB image, without requiring knowledge of camera parameters.
 
-For full details, please see the [paper](xxxx).
+For full details, please see the [paper at arxiv](https://arxiv.org/abs/2506.11133), or visit our [project page](https://cpantazop.github.io/HandRepo/).
 
 ## Installation
 
